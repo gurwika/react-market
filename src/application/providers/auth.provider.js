@@ -6,7 +6,7 @@ import { store } from '../../persistence/store';
 
 export const AuthProvider = ({ children }) => {
 	firebaseAPI.auth().onAuthStateChanged(user => {
-		console.log(user);
+		// console.log(user);
 	});
 
 	return <Provider store={store}>{children}</Provider>;
