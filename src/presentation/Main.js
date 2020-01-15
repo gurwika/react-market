@@ -11,12 +11,12 @@ import { AuthGuard } from '../application/guards/auth.guard';
 import Login from './pages/login/Login';
 import Signup from './pages/signup/Signup';
 import Home from './pages/home/Home';
-import AuthHeader from './components/authHeader/AuthHeader';
+import Header from './components/header/Header';
 
 export const Main = () => (
 	<Router history={history}>
 		<AuthProvider>
-			<AuthHeader />
+			<Header />
 			<div className="container">
 				<Route exact path="/" render={AuthGuard(Home)} />
 				<Route exact path="/login" render={NonAuthGuard(Login)} />

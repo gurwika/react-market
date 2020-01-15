@@ -2,18 +2,18 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import './AuthHeader.scss';
+import './Header.scss';
 import { requestSignOutUser } from '../../../domain/mutations';
 
-const AuthHeader = ({ identity, handleSignOut }) => (
-	<div className="auth-header">
-		<div className="auth-header__wrapper">
+const Header = ({ identity, handleSignOut }) => (
+	<div className="header">
+		<div className="header__wrapper">
 			<div className="container-fluid">
-				<div className="auth-header__container wrapper">
-					<div className="auth-header__logo">
+				<div className="header__container wrapper">
+					<div className="header__logo">
 						<img src="/media/logos/black.jpg" />
 					</div>
-					<div className="auth-header__navigation">
+					<div className="header__navigation">
 						{(!identity || !identity.accessToken) && <Link to="/login">Login</Link>}
 						{(!identity || !identity.accessToken) && <Link to="/signup">Signup</Link>}
 						{identity && identity.accessToken && <button onClick={handleSignOut}>Sign out</button>}
@@ -34,4 +34,4 @@ const mapDispatchToProps = (dispatch, { id }) => {
 	};
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AuthHeader);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
