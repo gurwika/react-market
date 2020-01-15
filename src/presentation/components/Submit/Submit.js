@@ -1,8 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
+import './Submit.scss';
 
 export default ({ title, disabled }) => (
-	<button type="submit" disabled={disabled}>
+	<button className="submit" type="submit" disabled={disabled}>
 		{title}
 	</button>
 );

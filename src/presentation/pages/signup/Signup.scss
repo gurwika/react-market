@@ -1,0 +1,19 @@
+.signup {
+	&__title {
+		margin-bottom: 40px;
+		font-weight: 700;
+		font-size: 22px;
+	}
+	&__container {
+		max-width: 420px;
+		margin: 0 auto;
+	}
+	&__footer {
+		&-submit {
+			float: right;
+		}
+	}
+	&__input {
+		margin-bottom: 20px;
+	}
+}

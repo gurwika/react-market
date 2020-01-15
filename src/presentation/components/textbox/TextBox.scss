@@ -1,0 +1,30 @@
+.text-box {
+	&__container {
+		border: 0.5px solid #ccc;
+		padding: 2px 18px 2px 30px;
+		position: relative;
+
+		&--error {
+			border-color: #d72020;
+		}
+	}
+	&__input {
+		border: none;
+		height: 100%;
+		width: 100%;
+		padding-right: 12px;
+		font-weight: 100;
+		background-color: transparent;
+		height: 55px;
+	}
+	&__error {
+		top: 100%;
+		left: 0;
+		width: 100%;
+		padding-left: 30px;
+		line-height: 20px;
+		font-size: 10px;
+		position: absolute;
+		color: #d72020;
+	}
+}

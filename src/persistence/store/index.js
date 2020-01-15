@@ -7,8 +7,8 @@ import * as sagas from '../../domain/saga';
 const sagaMiddleware = createSagaMiddleware();
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
+export const store = createStore(reducer, composeEnhancers(applyMiddleware(sagaMiddleware)));
+
 for (let saga in sagas) {
 	sagaMiddleware.run(sagas[saga]);
 }
-
-export const store = createStore(reducer, composeEnhancers(applyMiddleware(sagaMiddleware)));

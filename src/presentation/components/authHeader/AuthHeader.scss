@@ -1,0 +1,39 @@
+.auth-header {
+	&__wrapper {
+		padding: 19px 0;
+		background-color: #fff;
+		width: 100%;
+		border-bottom: 0.5px solid #ccc;
+		z-index: 12;
+		margin-bottom: 60px;
+	}
+	&__container {
+		padding: 19px 0;
+	}
+	&__logo {
+		float: left;
+
+		img {
+			display: block;
+			height: 42px;
+		}
+	}
+	&__navigation {
+		float: right;
+
+		button,
+		a {
+			border-radius: 40px;
+			padding: 14px 24px 12px;
+			border: 1px solid #000;
+			cursor: pointer;
+			font-size: 12px;
+			min-width: 95px;
+			transition: background-color 0.3s linear, color 0.3s linear;
+			display: block;
+			float: left;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+}

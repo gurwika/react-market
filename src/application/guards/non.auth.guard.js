@@ -1,7 +1,7 @@
 import { Redirect } from 'react-router';
 import React from 'react';
 
-import { store } from '../../persistence/store';
+import apiClientService from '../services/apiClient.service';
 
 export const NonAuthGuard = Component => ({ match }) =>
-	store.getState().session.authenticated ? <Redirect to="/" /> : <Component match={match} />;
+	apiClientService.isAuthorized() ? <Redirect to="/" /> : <Component match={match} />;
